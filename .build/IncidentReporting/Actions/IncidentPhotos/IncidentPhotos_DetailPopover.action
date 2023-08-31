@@ -1,0 +1,12 @@
+{
+    "PopoverItems": [{
+            "Title": "Open Document",
+            "OnPress": "/IncidentReporting/Actions/IncidentPhotos/IncidentPhotos_OpenDocument.action"
+        },
+        {
+            "Title": "Delete",
+            "OnPress": "/IncidentReporting/Rules/IncidentPhotos/IncidentPhotos_DeleteConfirmation.js"
+        }
+    ],
+    "_Type": "Action.Type.PopoverMenu"
+}

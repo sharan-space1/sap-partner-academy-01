@@ -1,0 +1,90 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
+			"Sections": [
+				{
+					"Header": {
+						"_Name": "SectionHeader0",
+						"AccessoryType": "none",
+						"UseTopPadding": false
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/IncidentReporting/Services/PA49930U00.service",
+						"EntitySet": "SafetyIncidents",
+						"QueryOptions": "$top=9&$expand=category,priority,incidentStatus,incidentPhotos&$orderby=createdAt desc",
+						"ServerSidePaging": true
+					},
+					"_Name": "SectionObjectTable0",
+					"EmptySection": {
+						"Caption": "No record found!",
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true
+						},
+						"Title": "{title}",
+						"Subhead": "{description}",
+						"Footnote": "{category/name}",
+						"Description": "{createdBy}",
+						"StatusText": "{incidentStatus/name}",
+						"SubstatusText": "{modifiedBy}",
+						"DetailImageIsCircular": false,
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "disclosureIndicator",
+						"OnPress": "/IncidentReporting/Actions/SafetyIncidents/NavToSafetyIncidents_Detail.action"
+					},
+					"Search": {
+						"Enabled": true,
+						"Placeholder": "Item Search",
+						"BarcodeScanner": true,
+						"Delay": 500,
+						"MinimumCharacterThreshold": 3
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": true,
+						"LoadingIndicatorText": "Loading more items, please wait..."
+					}
+				}
+			],
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": "Loading, please wait..."
+			}
+		}
+	],
+	"_Type": "Page",
+	"_Name": "SafetyIncidents_List",
+	"Caption": "Incident List",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Add",
+				"Position": "right",
+				"IsIconCircular": false,
+				"OnPress": "/IncidentReporting/Actions/SafetyIncidents/NavToSafetyIncidents_Create.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	},
+	"ToolBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "ToolbarItem0",
+				"Caption": "Logout",
+				"Enabled": true,
+				"Visible": true,
+				"Clickable": true,
+				"Style": "",
+				"OnPress": "/IncidentReporting/Actions/Logout.action"
+			}
+		]
+	}
+}

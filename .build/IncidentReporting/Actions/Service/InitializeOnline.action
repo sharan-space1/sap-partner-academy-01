@@ -1,0 +1,10 @@
+{
+    "Service": "/IncidentReporting/Services/PA49930U00.service",
+    "_Type": "Action.Type.ODataService.Initialize",
+    "ShowActivityIndicator": true,
+    "OnSuccess": "/IncidentReporting/Actions/Service/InitializeOnlineSuccessMessage.action",
+    "OnFailure": "/IncidentReporting/Actions/Service/InitializeOnlineFailureMessage.action",
+    "ActionResult": {
+        "_Name": "init"
+    }
+}

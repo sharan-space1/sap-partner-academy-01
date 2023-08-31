@@ -1,0 +1,16 @@
+{
+    "PopoverItems": [{
+            "Title": "Add IncidentPhotos",
+            "OnPress": "/IncidentReporting/Actions/SafetyIncidents/NavToSafetyIncidents_CreateIncidentPhotos.action"
+        },
+        {
+            "Title": "Add IncidentHistory",
+            "OnPress": "/IncidentReporting/Actions/SafetyIncidents/NavToSafetyIncidents_CreateIncidentHistory.action"
+        },
+        {
+            "Title": "Delete",
+            "OnPress": "/IncidentReporting/Rules/SafetyIncidents/SafetyIncidents_DeleteConfirmation.js"
+        }
+    ],
+    "_Type": "Action.Type.PopoverMenu"
+}
